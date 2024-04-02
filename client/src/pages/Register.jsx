@@ -78,7 +78,7 @@ function Register() {
       .then((res) => {
           console.log(res);
           alert("Registration Successful!");
-           window.location.href='/login';
+           window.location.href='/';
       }).catch((err) => {
           console.error(err.message);
           alert("Error in Registration!")
