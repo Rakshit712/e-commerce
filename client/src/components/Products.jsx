@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { popularProducts } from '../data'
+
 import styled from 'styled-components';
 import Product from './Product'
 import axios from "axios";
@@ -24,7 +24,15 @@ function Products({ cat, filters, sort }) {
         
         setProducts(res.data);
       } catch (err) {}
-    };
+    }
+    //   try {
+    //     const res = await axios.get(cat?`http://localhost:8000/api/products?category=${cat}`
+    //     : "http://localhost:8000/api/products");
+    //     console.log(res.data)
+        
+    //     setProducts(res.data);
+    //   } catch (err) {}
+    // };
     getProducts();
   }, [cat]);
 
