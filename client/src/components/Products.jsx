@@ -18,8 +18,8 @@ function Products({ cat, filters, sort }) {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(cat?`https://e-commerce-hkjp.onrender.com/products?category=${cat}`
-        : "https://e-commerce-hkjp.onrender.com/products");
+        const res = await axios.get(cat?`https://e-commerce-hkjp.onrender.com/api/products?category=${cat}`
+        : "https://e-commerce-hkjp.onrender.com/api/products");
         console.log(res.data)
         
         setProducts(res.data);
